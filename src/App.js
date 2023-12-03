@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HomePage } from './GamePrice/pages/homepage';
+import Listcard from './GamePrice/pages/listcard';
+import MasterDetail from './GamePrice/pages/masterdetail';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <HomePage />,
+    },
+    {
+      path: '/Listcard/*',
+      element: <Listcard />,
+    },
+    {
+      path: '/Listcard/:id',
+      element: <MasterDetail />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+};
 
 export default App;
