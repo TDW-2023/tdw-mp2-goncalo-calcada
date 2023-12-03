@@ -10,7 +10,7 @@ import ListGameDeals from '../components/listgames';
 import Navbar from '../components/navbar';
 import { css } from 'styled-components';
 import { Card as BootstrapCard } from 'react-bootstrap';
-
+import backgroundImage from '../assets/img/background.png';
 export const linkStyle = css`
   margin-top: 1%;
   margin-left: 2%;
@@ -68,7 +68,7 @@ export const Backdrop = styled.div`
   width: 100%;
   height: 78vh;
   opacity: 0.94;
-  background-image: url(${require('../assets/img/background.png')});
+  background-image: url(${backgroundImage});
   background-size: cover;
 `;
 

@@ -26,7 +26,7 @@ describe('gamesReducer', () => {
         expect(nextState.loaded).toEqual(true);
     });
 
-    it('should handle fetchGamesFailure', () => {
+    it('fetchGamesFailure', () => {
         const initialState = { loading: true, error: null };
         const errorPayload = 'An error occurred';
         const nextState = gamesReducer(initialState, fetchGamesFailure(errorPayload));
